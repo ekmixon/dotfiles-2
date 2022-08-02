@@ -27,7 +27,7 @@ map[""] = "text/plain"
 # Serve everything as UTF-8 (although not technically
 # correct, this doesn't break anything for binary files).
 for key, value in map.items():
-    map[key] = value + "; charset=utf-8"
+    map[key] = f"{value}; charset=utf-8"
 
 # Create but don't automatically bind socket
 # (the 'allow_reuse_address' option needs to be set first).
